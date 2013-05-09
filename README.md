@@ -41,6 +41,18 @@ The OpenTok on WebRTC iOS SDK is supported on wifi connections.
 Release notes
 -------------
 
+May 15, 2013
+
+* This is version 2.1.3 of the OpenTok iOS SDK.
+* Mantis beta support — Mantis acts as a central switching station for non-peer-to-peer WebRTC streams. Mantis enables:
+  * High-quality multi-party video calls
+  * Reduced upload bandwidth consumption, with the ability to scale out a single WebRTC steam to many endpoints
+
+  For more information, see the [OpenTok blog](http://www.tokbox.com/blog/mantis-next-generation-cloud-technology-for-webrtc/).
+  If you are interested participating in the beta, please contact us at mantis@tokbox.com.
+
+* There were some issues when the OpenTok on WebRTC library ran in the background. We have fixed these issues.
+
 April 24, 2013
 
 *  OpenTok on WebRTC now provides increased connectivity. WebRTC is a peer-to-peer protocol that does not work on some
@@ -77,8 +89,6 @@ Known issues
 * Our graphics rendering pipeline causes this error to be logged when debugging: "CGContextDrawImage: invalid context 0x0." This should not affect the performance of your app. If you experience video quality issues, please let us know.
 
 * You cannot target the iOS Simulator. Build and deploy to a supported iOS device.
-
-* iOS 6.1.3 seems to have some issues when the OpenTok on WebRTC library is running in the background. We are investigating this.
 
 In XCode, you need to remove armv7s from the Valid Architectures section of the Build Settings for your project.
 
