@@ -52,6 +52,9 @@ May 15, 2013
   If you are interested participating in the beta, please contact us at mantis@tokbox.com.
 
 * There were some issues when the OpenTok on WebRTC library ran in the background. We have fixed these issues.
+* In XCode, you can include armv7s from the Valid Architectures section of the Build Settings for your project.
+(Previously, you could not target armv7s.)
+ 
 
 April 24, 2013
 
@@ -89,8 +92,6 @@ Known issues
 * Our graphics rendering pipeline causes this error to be logged when debugging: "CGContextDrawImage: invalid context 0x0." This should not affect the performance of your app. If you experience video quality issues, please let us know.
 
 * You cannot target the iOS Simulator. Build and deploy to a supported iOS device.
-
-In XCode, you need to remove armv7s from the Valid Architectures section of the Build Settings for your project.
 
 Peer-to-peer Streaming Limitations
 ----------------------------------
