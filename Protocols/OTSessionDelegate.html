@@ -1,10 +1,18 @@
 <!DOCTYPE HTML>
 <html>
-	<% locals.title = 'OTSessionDelegate - OpenTok on WebRTC iOS SDK docs' %>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>OTSessionDelegate Protocol Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 737)" />
+	</head>
 	<body>
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">OpenTok on WebRTC iOS SDK </a></h1>
+				<h1><a id="libraryTitle" href="../index.html">OpenTok 2.0 iOS SDK </a></h1>
 				<a id="developerHome" href="../index.html">TokBox, Inc</a>
 			</div>
 			
@@ -36,6 +44,10 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
+	<option value="//api/name/session:didCreateConnection:">&nbsp;&nbsp;&nbsp;&nbsp;- session:didCreateConnection:</option>
+	
+	<option value="//api/name/session:didDropConnection:">&nbsp;&nbsp;&nbsp;&nbsp;- session:didDropConnection:</option>
+	
 	<option value="//api/name/session:didDropStream:">&nbsp;&nbsp;&nbsp;&nbsp;- session:didDropStream:</option>
 	
 	<option value="//api/name/session:didFailWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- session:didFailWithError:</option>
@@ -66,6 +78,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Monitoring streams in a session">Monitoring streams in a session</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Monitoring connections in a session">Monitoring connections in a session</a></span></li>
+	
 </ul></li>
 
 
@@ -77,6 +91,10 @@
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/session:didCreateConnection:">session:didCreateConnection:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/session:didDropConnection:">session:didDropConnection:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/session:didDropStream:">session:didDropStream:</a></span></li>
 	
@@ -146,14 +164,14 @@ you specify an OTSessionDelegate object.</p>
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/sessionDidConnect:">&ndash;&nbsp;sessionDidConnect:</a></code>
-		<span class="tooltip"><p>Sent when the session connects.</p></span>
+		<span class="tooltip"><p>Sent when the client connects to the session.</p></span>
 	</span>
 	
 	<span class="task-item-suffix">required method</span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/sessionDidDisconnect:">&ndash;&nbsp;sessionDidDisconnect:</a></code>
-		<span class="tooltip"><p>Sent when the session disconnects.</p></span>
+		<span class="tooltip"><p>Sent when the client disconnects from the session.</p></span>
 	</span>
 	
 	<span class="task-item-suffix">required method</span>
@@ -190,6 +208,30 @@ you specify an OTSessionDelegate object.</p>
 </li>
 						</ul>
 						
+						
+						<a title="Monitoring connections in a session" name="task_Monitoring connections in a session"></a>
+						<h3 class="subsubtitle task-title">Monitoring connections in a session</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/session:didCreateConnection:">&ndash;&nbsp;session:didCreateConnection:</a></code>
+		<span class="tooltip"><p>Sent when other client connects to the session. The <code>connection</code> object represents the client&rsquo;s
+connection to the session.</p></span>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/session:didDropConnection:">&ndash;&nbsp;session:didDropConnection:</a></code>
+		<span class="tooltip"><p>Sent when another client disconnects from the session. The <code>connection</code> object represents the connection
+that the client had to the session.</p></span>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li>
+						</ul>
+						
 					</div>
 					
 					
@@ -203,6 +245,118 @@ you specify an OTSessionDelegate object.</p>
 					<div class="section section-methods">
 						<a title="Instance Methods" name="instance_methods"></a>
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/session:didCreateConnection:" title="session:didCreateConnection:"></a>
+	<h3 class="subsubtitle method-title">session:didCreateConnection:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sent when other client connects to the session. The <code>connection</code> object represents the client&rsquo;s
+connection to the session.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)session:(OTSession *)<em>session</em> didCreateConnection:(OTConnection *)<em>connection</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>session</em></dt>
+			<dd><p>The <a href="../Classes/OTSession.html">OTSession</a> instance that sent this message.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>connection</em></dt>
+			<dd><p>The new <a href="../Classes/OTConnection.html">OTConnection</a> object.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This message is not sent when your own client connects to the session. The <a href="#//api/name/sessionDidConnect:">[OTSessionDelegate sessionDidConnect:]</a>
+message is sent when your own client connects to the session.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">OTSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/session:didDropConnection:" title="session:didDropConnection:"></a>
+	<h3 class="subsubtitle method-title">session:didDropConnection:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sent when another client disconnects from the session. The <code>connection</code> object represents the connection
+that the client had to the session.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)session:(OTSession *)<em>session</em> didDropConnection:(OTConnection *)<em>connection</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>session</em></dt>
+			<dd><p>The <a href="../Classes/OTSession.html">OTSession</a> instance that sent this message.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>connection</em></dt>
+			<dd><p>The <a href="../Classes/OTConnection.html">OTConnection</a> object for the client that disconnected from the session.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This message is not sent when your own client disconnects from the session. The <a href="#//api/name/sessionDidDisconnect:">[OTSessionDelegate sessionDidDisconnect:]</a>
+message is sent when your own client connects to the session.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">OTSession.h</code><br />
+	</div>				
+	
+	
+</div>
 						
 						<div class="section-method">
 	<a name="//api/name/session:didDropStream:" title="session:didDropStream:"></a>
@@ -381,7 +535,7 @@ property. (If they matches, the stream is published from your connection.)</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Sent when the session connects.</p>
+		<p>Sent when the client connects to the session.</p>
 	</div>		
 	
 	
@@ -425,7 +579,7 @@ property. (If they matches, the stream is published from your connection.)</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Sent when the session disconnects.</p>
+		<p>Sent when the client disconnects from the session.</p>
 	</div>		
 	
 	

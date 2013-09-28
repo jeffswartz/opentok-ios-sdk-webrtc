@@ -1,10 +1,18 @@
 <!DOCTYPE HTML>
 <html>
-	<% locals.title = 'OTSubscriberDelegate - OpenTok on WebRTC iOS SDK docs' %>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>OTSubscriberDelegate Protocol Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 737)" />
+	</head>
 	<body>
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">OpenTok on WebRTC iOS SDK </a></h1>
+				<h1><a id="libraryTitle" href="../index.html">OpenTok 2.0 iOS SDK </a></h1>
 				<a id="developerHome" href="../index.html">TokBox, Inc</a>
 			</div>
 			
@@ -44,6 +52,8 @@
 	
 	<option value="//api/name/subscriberVideoDataReceived:">&nbsp;&nbsp;&nbsp;&nbsp;- subscriberVideoDataReceived:</option>
 	
+	<option value="//api/name/subscriberVideoDisabled:">&nbsp;&nbsp;&nbsp;&nbsp;- subscriberVideoDisabled:</option>
+	
 	
 	
 </select>
@@ -81,6 +91,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/subscriberDidConnectToStream:">subscriberDidConnectToStream:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/subscriberVideoDataReceived:">subscriberVideoDataReceived:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/subscriberVideoDisabled:">subscriberVideoDisabled:</a></span></li>
 	
 </ul></li>
 
@@ -166,6 +178,15 @@ more time to synchronize. This message is sent after the
 		<code><a href="#//api/name/stream:didChangeVideoDimensions:">&ndash;&nbsp;stream:didChangeVideoDimensions:</a></code>
 		<span class="tooltip"><p>Sent when the video dimensions of a stream changes. This occurs when a stream published from an iOS device resizes,
 based on a change in the device orientation.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/subscriberVideoDisabled:">&ndash;&nbsp;subscriberVideoDisabled:</a></code>
+		<span class="tooltip"><p>This message is sent when the OpenTok media server stops sending video to the subscriber.
+This feature of the OpenTok media server has a subscriber drop the video stream when connectivity degrades.
+The subscriber continues to receive the audio stream, if there is one.</p></span>
 	</span>
 	
 	
@@ -359,6 +380,52 @@ more time to synchronize. This message is sent after the
 		<dl class="argument-def parameter-def">
 			<dt><em>subscriber</em></dt>
 			<dd><p>The subscriber that generated this event.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">OTSubscriber.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/subscriberVideoDisabled:" title="subscriberVideoDisabled:"></a>
+	<h3 class="subsubtitle method-title">subscriberVideoDisabled:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>This message is sent when the OpenTok media server stops sending video to the subscriber.
+This feature of the OpenTok media server has a subscriber drop the video stream when connectivity degrades.
+The subscriber continues to receive the audio stream, if there is one.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)subscriberVideoDisabled:(OTSubscriber *)<em>subscriber</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>subscriber</em></dt>
+			<dd><p>The <a href="../Classes/OTSubscriber.html">OTSubscriber</a> that will no longer receive video.</p></dd>
 		</dl>
 		
 	</div>

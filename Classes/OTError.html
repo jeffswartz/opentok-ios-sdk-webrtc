@@ -1,13 +1,18 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-	    <link rel="stylesheet" href="http://static.opentok.com/css/appledoc/styles.css">
-	    <link rel="stylesheet" href="http://static.opentok.com/css/appledoc/stylesPrint.css">
-  	</head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>OTError Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 737)" />
+	</head>
 	<body>
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">OpenTok on WebRTC iOS SDK </a></h1>
+				<h1><a id="libraryTitle" href="../index.html">OpenTok 2.0 iOS SDK </a></h1>
 				<a id="developerHome" href="../index.html">TokBox, Inc</a>
 			</div>
 			
@@ -113,10 +118,16 @@ related to methods of the OTSession class:</p>
 <li><code>OTConnectionFailed</code> &mdash; There was an error connecting to OpenTok services.</li>
 <li><code>OTNoMessagingServer</code> &mdash; No messaging server is available for this session.</li>
 <li><code>OTSDKUpdateRequired</code> &mdash; A new version of the OpenTok SDK is available and required to connect to this session.</li>
+<li><code>OTConnectionRefused</code> &mdash; A socket could not be opened to the messaging server. Check that outbound ports 5560 or 8080 are accessible</li>
+<li><code>OTSessionStateFailed</code> &mdash; The connection timed out while attempting to get the session&rsquo;s state</li>
 <li><code>OTP2PSessionUnsupported</code> &mdash; iOS does not currently support peer-to-peer OpenTok sessions.</li>
 <li><code>OTUnknownServerError</code> &mdash; The client was unable to communicate with the server, possibly due to a version incompatibility</li>
 <li><code>OTP2PSessionRequired</code> &mdash; A peer-to-peer enabled session is required to use this SDK</li>
 <li><code>OTP2PSessionMaxParticipants</code> &mdash; A peer-to-peer enabled session can only have two participants</li>
+<li><code>OTSessionConnectionTimeout</code> &mdash; The connection timed out while attempting to connect to the session</li>
+<li><code>OTSessionCompatibilityMismatch</code> &mdash; There was a mismatch with the session&rsquo;s capabilities. You&rsquo;re likely trying to connect iOS to</li>
+<li>`a P2P Flash session on the web.</li>
+<li><code>OTSessionSignalConnection</code> &mdash; There was an error sending the signal. Make sure the session is connected, the data parameter is of type NSDictionary, NSString, NSNumber, NSNull, or NSArray. Also make sure you did not exceed 1KB for the type and 8KB for the data.</li>
 </ul>
 
 
