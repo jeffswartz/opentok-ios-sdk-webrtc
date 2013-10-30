@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.5 (build 737)" />
+		<meta name="generator" content="appledoc 2.2 (build 961)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -103,9 +103,9 @@
 related to methods of the OTPublisher class:</p>
 
 <ul>
-<li><code>OTNoMediaPublished</code> &mdash; Attempting to publish a stream with no audio or video.</li>
-<li><code>OTUserDeniedCameraAccess</code> &mdash; The user denied access to the camera during publishing.</li>
-<li><code>OTSessionDisconnected</code> &mdash; Attempting to publish to a disconnected session.</li>
+<li><code>OTNoMediaPublished</code> &ndash; Attempting to publish a stream with no audio or video.</li>
+<li><code>OTUserDeniedCameraAccess</code> &ndash; The user denied access to the camera during publishing.</li>
+<li><code>OTSessionDisconnected</code> &ndash; Attempting to publish to a disconnected session.</li>
 </ul>
 
 
@@ -113,21 +113,21 @@ related to methods of the OTPublisher class:</p>
 related to methods of the OTSession class:</p>
 
 <ul>
-<li><code>OTAuthorizationFailure</code> &ndash; An invalid API key or token was provided.</li>
-<li><code>OTInvalidSessionId</code> &mdash; An invalid session ID was provided.</li>
-<li><code>OTConnectionFailed</code> &mdash; There was an error connecting to OpenTok services.</li>
-<li><code>OTNoMessagingServer</code> &mdash; No messaging server is available for this session.</li>
-<li><code>OTSDKUpdateRequired</code> &mdash; A new version of the OpenTok SDK is available and required to connect to this session.</li>
-<li><code>OTConnectionRefused</code> &mdash; A socket could not be opened to the messaging server. Check that outbound ports 5560 or 8080 are accessible</li>
-<li><code>OTSessionStateFailed</code> &mdash; The connection timed out while attempting to get the session&rsquo;s state</li>
-<li><code>OTP2PSessionUnsupported</code> &mdash; iOS does not currently support peer-to-peer OpenTok sessions.</li>
-<li><code>OTUnknownServerError</code> &mdash; The client was unable to communicate with the server, possibly due to a version incompatibility</li>
-<li><code>OTP2PSessionRequired</code> &mdash; A peer-to-peer enabled session is required to use this SDK</li>
-<li><code>OTP2PSessionMaxParticipants</code> &mdash; A peer-to-peer enabled session can only have two participants</li>
-<li><code>OTSessionConnectionTimeout</code> &mdash; The connection timed out while attempting to connect to the session</li>
-<li><code>OTSessionCompatibilityMismatch</code> &mdash; There was a mismatch with the session&rsquo;s capabilities. You&rsquo;re likely trying to connect iOS to</li>
+<li><code>OTAuthorizationFailure</code> - An invalid API key or token was provided.</li>
+<li><code>OTInvalidSessionId</code> &ndash; An invalid session ID was provided.</li>
+<li><code>OTConnectionFailed</code> &ndash; There was an error connecting to OpenTok services.</li>
+<li><code>OTNoMessagingServer</code> &ndash; No messaging server is available for this session.</li>
+<li><code>OTSDKUpdateRequired</code> &ndash; A new version of the OpenTok SDK is available and required to connect to this session.</li>
+<li><code>OTConnectionRefused</code> &ndash; A socket could not be opened to the messaging server. Check that outbound ports 5560 or 8080 are accessible</li>
+<li><code>OTSessionStateFailed</code> &ndash; The connection timed out while attempting to get the session&rsquo;s state</li>
+<li><code>OTP2PSessionUnsupported</code> &ndash; iOS does not currently support peer-to-peer OpenTok sessions.</li>
+<li><code>OTUnknownServerError</code> &ndash; The client was unable to communicate with the server, possibly due to a version incompatibility</li>
+<li><code>OTP2PSessionRequired</code> &ndash; A peer-to-peer enabled session is required to use this SDK</li>
+<li><code>OTP2PSessionMaxParticipants</code> &ndash; A peer-to-peer enabled session can only have two participants</li>
+<li><code>OTSessionConnectionTimeout</code> &ndash; The connection timed out while attempting to connect to the session</li>
+<li><code>OTSessionCompatibilityMismatch</code> &ndash; There was a mismatch with the session&rsquo;s capabilities. You&rsquo;re likely trying to connect iOS to</li>
 <li>`a P2P Flash session on the web.</li>
-<li><code>OTSessionSignalConnection</code> &mdash; There was an error sending the signal. Make sure the session is connected, the data parameter is of type NSDictionary, NSString, NSNumber, NSNull, or NSArray. Also make sure you did not exceed 1KB for the type and 8KB for the data.</li>
+<li><code>OTSessionSignalConnection</code> &ndash; There was an error sending the signal. Make sure the session is connected, the data parameter is of type NSDictionary, NSString, NSNumber, NSNull, or NSArray. Also make sure you did not exceed 1KB for the type and 8KB for the data.</li>
 </ul>
 
 
@@ -135,12 +135,12 @@ related to methods of the OTSession class:</p>
 related to methods of the OTSubscriber class:</p>
 
 <ul>
-<li><code>OTFailedToConnect</code> &mdash; Subscriber failed to connect to stream. Can reattempt connection.</li>
-<li><code>OTConnectionTimedOut</code> &mdash; Subscriber timed out while attempting to connect to stream. Can reattempt connection.</li>
-<li><code>OTNoStreamMedia</code> &mdash; The stream has no audio or video to subscribe to.</li>
-<li><code>OTInitializationFailure</code> &mdash; Subscriber failed to initialize.</li>
-<li><code>OTInvalidStreamType</code> &mdash; The stream type is not currently supported by this version of the SDK.</li>
-<li><code>OTSelfSubscribeFailure</code> &mdash; This version of the SDK cannot subscribe to its own streams.</li>
+<li><code>OTFailedToConnect</code> &ndash; Subscriber failed to connect to stream. Can reattempt connection.</li>
+<li><code>OTConnectionTimedOut</code> &ndash; Subscriber timed out while attempting to connect to stream. Can reattempt connection.</li>
+<li><code>OTNoStreamMedia</code> &ndash; The stream has no audio or video to subscribe to.</li>
+<li><code>OTInitializationFailure</code> &ndash; Subscriber failed to initialize.</li>
+<li><code>OTInvalidStreamType</code> &ndash; The stream type is not currently supported by this version of the SDK.</li>
+<li><code>OTSelfSubscribeFailure</code> &ndash; This version of the SDK cannot subscribe to its own streams.</li>
 </ul>
 
 					</div>
@@ -168,9 +168,9 @@ related to methods of the OTSubscriber class:</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 TokBox, Inc. All rights reserved.</span><br />
+						<p><span class="copyright">&copy; 2013 TokBox, Inc. All rights reserved. (Last updated: 2013-10-29)</span><br />
 						
-						</p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 961)</a>.</span></p>
 						
 					</div>
 				</div>
@@ -258,14 +258,6 @@ related to methods of the OTSubscriber class:</p>
 			}
 			
 			window.onload = init;
-			
-			// If showing in Xcode, hide the TOC and Header
-			if (navigator.userAgent.match(/xcode/i)) {
-				document.getElementById("contents").className = "hideInXcode"
-				document.getElementById("tocContainer").className = "hideInXcode"
-				document.getElementById("top_header").className = "hideInXcode"
-			}
-			
 		</script>
 	</body>
 </html>
